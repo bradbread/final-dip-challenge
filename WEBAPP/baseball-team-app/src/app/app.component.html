@@ -1,0 +1,14 @@
+<h1>Whose Baseball Team</h1>
+<app-login *ngIf=!this.auth></app-login>
+<app-signup *ngIf=!this.auth></app-signup>
+<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
+<nav *ngIf=this.auth>
+  <ul>
+    <li *ngIf=this.authLevel><a routerLink="/CreateEvent" routerLinkActive="active">CreateEvent</a></li>
+    <li><a routerLink="/events" routerLinkActive="active">Events</a></li>
+  </ul>
+  <button routerLink="" (click)="logout()">logout</button>
+
+</nav>
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet *ngIf=this.auth></router-outlet>

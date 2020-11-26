@@ -1,0 +1,16 @@
+<h2>Events</h2>
+
+<button (click)="getUpcomingEvents()">Upcoming Events</button>
+
+<button (click)="getPastEvents()">Past Events</button>
+
+<ul>
+    <li *ngFor="let e of events">
+        {{e.eventName}}
+        {{e.location}}
+        {{e.temporal}}
+        {{e.hostName}}
+        <button [routerLink]="['/viewpaid']" (click)="passEvent(e)">View/Enter Fees Paid</button>
+        <button (click)="deleteEvent(e)">Delete</button>
+    </li>
+</ul>

@@ -1,0 +1,13 @@
+INSERT INTO Member
+    (Username, Firstname, Surname, [Password],Salt,AuthLevel)
+VALUES('BigRich2', 'Richard' , 'Notacrook', HASHBYTES('SHA2_512', CONCAT('Seabass44', 'saltydog', 'hibekbfdmn')), 'saltydog', 'Manager'),
+    ('dennis87', 'Dennis' , 'Menace' , HASHBYTES('SHA2_512', CONCAT('password', 'saltmine', 'hibekbfdmn')), 'saltmine', 'Player');
+	
+INSERT INTO Game
+	(EventName, Location, Temporal, Forfeit)
+VALUES	('First Game', 'Ringwood', '2021-03-12', 0),
+		('Last Game', 'Sunshine', '2019-11-26', 0);
+		
+INSERT INTO Attendee
+	(EventId, Username, Paid)
+VALUES	(1, 'BigRich2', '25.00');

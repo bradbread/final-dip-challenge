@@ -1,0 +1,14 @@
+<h2>Or</h2>
+<h2>signup</h2>
+
+<form #signupForm="ngForm" (ngSubmit)="Signup(signupForm.form);">
+    <p>Username</p>
+    <input type="text" ngModel #userIdField="ngModel" name="Username" required placeholder="username">
+    <p>Firstname</p>
+    <input type="text" ngModel #userIdField="ngModel" name="Firstname" required placeholder="firstname">
+    <p>Surname</p>
+    <input type="text" ngModel #userIdField="ngModel" name="Surname" required placeholder="surname">
+    <p>password</p>
+    <input type="password" ngModel #passwordField="ngModel" name="Password" required>
+    <button>signup</button>
+</form>

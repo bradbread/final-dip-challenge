@@ -1,0 +1,16 @@
+<h2>Fees for Game {{this.event.eventName}}</h2>
+
+<form #paidForm="ngForm" (ngSubmit)="postPaid(paidForm.form);">
+    <p>Enter Amount Paid</p>
+    <input type="number" ngModel #userIdField="ngModel" name="Paid" required placeholder="20">
+    <p>Enter Who Paid (USERNAME)</p>
+    <input type="text" ngModel #userIdField="ngModel" name="Username" required placeholder="example24">
+    <button>Enter</button>
+</form>
+
+<ul>
+    <li *ngFor="let a of atendees">
+        {{a.username}} Paid: $
+        {{a.paid}} 
+    </li>
+</ul>

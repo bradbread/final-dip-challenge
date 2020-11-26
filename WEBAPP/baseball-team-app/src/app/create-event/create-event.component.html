@@ -1,0 +1,11 @@
+<h2>Create an Event</h2>
+
+<form #eventForm="ngForm" (ngSubmit)="postEvent(eventForm.form);">
+    <p>Event Name</p>
+    <input type="text" ngModel #userIdField="ngModel" name="eventName" required placeholder="">
+    <p>Location</p>
+    <input type="text" ngModel #userIdField="ngModel" name="location" required placeholder="">
+    <p>Date (currently takes a javascript formated datetime)</p>
+    <input type="text" ngModel #userIdField="ngModel" name="temporal" required placeholder="yyyy-mm-dd">
+    <button>signup</button>
+</form>
